@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="bootstrap.min.css">-->
+    <!--active color #02B281 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+            background-color: #0C2C2B;
+        }
+        .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+             border-bottom-width: 0px;
+        }
+        .table th, .table td {
+            border-bottom: none !important;
+            border-right: 1px solid #737373;
+        }
+        .table td{
+            border-top: none !important;
+        }
+
+        .table {
+            border-top: 1px solid #737373;
+        }
+        .table-striped > tbody > tr > td:nth-child(6), .table-striped > tbody > tr> th:nth-child(6), .table th:nth-child(6)  {
+            border-right: 0;
+        }
+
+        .table>thead>tr>th {
+            position: relative;
+        }
+        .top-arrow{
+            width:4px;
+            height:4px;
+            border-top:  4px solid transparent;
+            border-right:  4px solid transparent;
+            border-left:  4px solid transparent;
+            border-bottom:  4px solid #D0DBDC;
+            position: absolute;
+            top: 7px;
+            right:5px;
+        }
+        .down-arrow{
+            width:4px;
+            height:4px;
+            border-top:  4px solid #D0DBDC;
+            border-right:  4px solid transparent;
+            border-left:  4px solid transparent;
+            border-bottom:  4px solid transparent;
+            position: absolute;
+            bottom: 7px;
+            right:5px;
+        }
+        .page-top-arrow{
+            width:4px;
+            height:4px;
+            border-top:  4px solid transparent;
+            border-right:  4px solid transparent;
+            border-left:  4px solid transparent;
+            border-bottom:  4px solid #333;
+            position: absolute;
+            top: -3px;
+            left:0px;
+        }
+        .page-down-arrow{
+            width:4px;
+            height:4px;
+            border-top:  4px solid #333;
+            border-right:  4px solid transparent;
+            border-left:  4px solid transparent;
+            border-bottom:  4px solid transparent;
+            position: absolute;
+            bottom: -5px;
+            left:0px;
+        }
+
+        .arrowContainer{
+            position: relative;
+            width:10px;
+            height:10px;
+            margin-left:-27px;
+        }
+    </style>
+</head>
+<body style="background-color: #0C2C2B;color:#D0DBDC;">
+
+    <!-- START NAV-BAR -->
+    <nav class="navebar navbar-default" style="background-color: #164847;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="padding:5px 20px;">
+                    <img src="img/img.jpg" style="width:100px;height:40px;">
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a style=" color: #D0DBDC">Front-End Developer Chanllenge</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END NAV-BAR -->
+
+    <!-- START CONTAINER -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- START NAVBAR FORMS -->
+                <div class="col-lg-12" style="padding: 0 7px 0 7px;">
+                    <ul class="list-inline">
+                        <li >
+                            <!-- START GET CHANNEL DATA -->
+                            <form class="navbar-form"style="margin-left:0; padding:0;">
+                                <span style="padding-right: 3px;">Channel Link</span>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="http://hello.com" size="28" style="border:1px solid transparent;padding:0 0 0 7px; height:30px;border-radius: 5px;">
+                                </div>
+                                <button class="btn btn-success" type="submit"style="height:31px;width:70px; padding:6px;margin-left:4px;">Submit</button>
+                            </form>
+                            <!-- END GET CHANNEL DATA -->
+                        </li>
+                        <li class="pull-right">
+                            <!-- START SEARCH CHANNEL-->
+                            <form class="navbar-form"style="margin-right: 0;padding:0;">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" style="padding:0 0 0 7px; height:30px;"placeholder="Search in titles and descriptions" size="31">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" style="height:30px;background-color: #e3e3e3;"><i class="glyphicon glyphicon-search" ></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- END SEARCH CHANNEL -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- END NAVBAR FORMS -->
+
+                <!-- START TABLE -->
+                <div class="col-lg-12" style="padding:0; background-color: #164847; border-radius:3px; border: 1px solid #737373">
+                    <h4 style="margin-left: 7px;">Videos items</h4>
+                    <!--<hr>-->
+                    <div class="table-responsive">
+                        <table class="table table-striped " style="font-size:12px;">
+                            <thead>
+                                <tr>
+                                    <th>Title
+                                        <div class="top-arrow"></div>
+                                        <div class="down-arrow"></div>
+                                    </th>
+                                    <th>Upload Date
+                                        <div class="top-arrow"></div>
+                                        <div class="down-arrow"></div>
+                                    </th>
+                                    <th>Duration
+                                        <div class="top-arrow"></div>
+                                        <div class="down-arrow"></div>
+                                    </th>
+                                    <th>No. of views
+                                        <div class="top-arrow"></div>
+                                        <div class="down-arrow"></div>
+                                    </th>
+                                    <th>No. of likes
+                                        <div class="top-arrow"></div>
+                                        <div class="down-arrow"></div>
+                                    </th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width:270px">hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                </tr>
+                                <tr>
+                                    <td style="width:270px">hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                </tr>
+                                <tr>
+                                    <td style="width:270px">hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                </tr>
+                                <tr>
+                                    <td style="width:270px">hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                    <td>hello</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Start PAGING footer -->
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <!-- START PAGING COUNTER -->
+                            <div class="col-lg-6">
+                                <ul class="list-inline">
+                                    <li>Page: 1 Show</li>
+                                    <li>
+                                        <input type="text" value="50" style="border-radius:3px;color:#333;padding: 0 0 0 7px;" size="4" disabled>
+
+                                    </li>
+                                    <li style="padding: 0">
+                                        <div class="arrowContainer">
+                                            <div class="page-down-arrow"></div>
+                                            <div class="page-top-arrow"></div>
+                                        </div>
+                                    </li>
+                                    <li style="margin-left:-15px;">
+                                        entries
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END PAGING COUNTER -->
+
+                            <!-- START NEXT/PREV ARROWS -->
+                            <div class="col-lg-6">
+                                <ul class="list-inline">
+                                    <li class="pull-right">
+                                        <button class="btn btn-default" type="submit" style="height:26px;background-color: transparent; border:1px solid #737373; padding:2px 8px 6px 8px;color:#D0DBDC;">
+                                            ❯
+                                        </button>
+                                    </li>
+                                    <li class="pull-right">
+                                        <button class="btn btn-default" type="submit" style="height:26px;border:1px solid #737373 ;background-color: transparent;margin-right:-11px;padding:2px 8px 6px 8px;color:#D0DBDC;">
+                                            ❮
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END NEXT/PERV ARROWS -->
+                        </div>
+                    </div>
+                    <!-- END PAGING footer-->
+                </div>
+                <!-- END TABLE -->
+            </div>
+            <div class="col-lg-4">
+                <div class="col-lg-12" style="border-radius: 3px; height: 550px; border :1px solid #737373; background-color: #164847;margin-top:7px;padding:0;">
+
+                    <ul class="list-group" style="margin-bottom: 0px;height:100%;background-color: #0C2C2B;">
+                        <li class="list-group-item" style="border:0; background-color: #164847;">
+                            <h4 style="border-bottom:1px solid #737373; padding-bottom:6px;padding-left:7px">Video Details</h4>
+                        </li>
+                        <li class="list-group-item" style="border:0;background-color: #164847;;">
+                            <iframe width="100%" height="200px"
+                                    src="https://www.youtube.com/embed/XGSy3_Czz8k" style="border:0;">
+                            </iframe>
+                        </li>
+
+                        <li class="list-group-item" style="border:0;padding:0;height:100%;background-color: transparent;">
+                            <!--height:100%;-->
+                            <ul class="list-group"style="margin-bottom: 0px;background-color: #0C2C2B;">
+                                <li class="list-group-item" style="border:0;border-radius: 3px; background-color: transparent;padding-bottom:0;">
+                                    <form>
+                                        <div class="form-group" >
+                                            <label >Medium Quality thumbnail</label>
+                                            <input class="form-control" type="text" value="http://hellob2a.com"></div>
+                                    </form>
+                                </li>
+                                <li class="list-group-item" style="background-color:transparent;border:0;">
+                                    <input type="submit" class="btn btn-success pull-right" style="height: 30px; padding:3px;text-align:center;margin-left:5px;padding: 0 7px 0 7px;" value="Download">
+                                    <input type="submit" class="btn btn-success pull-right" style="height: 30px; padding:3px;text-align:center;padding: 0 7px 0 7px;"value="Copy">
+                                </li>
+                                <li class="list-group-item" style="border:0;background-color: transparent;border-radius: 3px;padding-bottom:0;">
+                                    <form>
+                                        <div class="form-group" >
+                                            <label >High Quality thumbnail</label>
+                                            <input class="form-control" type="text" value="http://hellob2a.com">
+                                           </div>
+                                    </form>
+                                </li>
+                                <li class="list-group-item" style="background-color:transparent;border:0;">
+                                    <input type="submit" class="btn btn-success pull-right" style="height: 30px;text-align:center; padding:3px;margin-left:5px;padding: 0 7px 0 7px;" value="Download">
+                                    <input type="submit" class="btn btn-success pull-right" style="height: 30px;text-align:center; padding:3px;padding: 0 7px 0 7px;"value="Copy">
+                                </li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--<script src="bootstrap.min.js"></script>-->
+</body>
+</html>
