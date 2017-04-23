@@ -1,0 +1,155 @@
+body{
+    background-color: #0C2C2B;
+    color:#D0DBDC;
+}
+
+.navbar-default{
+    background-color: #164847;
+}
+
+.navbar-brand{
+    padding:5px 20px;
+}
+.navbar-brand img{
+    width:100px;height:40px;
+}
+
+.container-fluid .navbar-nav li a{
+    color: #D0DBDC;
+}
+
+.navbar-forms-container{
+    padding: 0 7px 0 7px;
+}
+
+.get-channel-style{
+    margin-left:0; padding:0;
+}
+
+.get-channel-style span{
+    padding-right: 3px;
+}
+
+#input-get-channel-style{
+    border:1px solid transparent;
+    padding:0 0 0 7px;
+    height:30px;
+    border-radius: 5px;
+}
+
+.search-channel-style{
+    margin-right: 0;
+    padding:0;
+}
+
+#input-search-channel-style{
+    padding:0 0 0 7px;
+    height:30px;
+}
+
+.button-search-channel-style{
+    height:30px;
+    background-color: #e3e3e3;
+}
+
+.button-get-channel-style{
+    height:31px;
+    width:70px;
+    padding:6px;
+    margin-left:4px;
+}
+
+.table-container-style{
+    padding:0;
+    background-color: #164847;
+    border-radius:3px;
+    border: 1px solid #737373;
+}
+
+.table-container-style h4{
+    margin-left: 7px;
+}
+
+#table-style{
+    font-size:12px;
+}
+
+#title-table-size-style{
+    width:270px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #0C2C2B;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-bottom-width: 0px;
+}
+.table th, .table td {
+    border-bottom: none !important;
+    border-right: 1px solid #737373;
+}
+.table td{
+    border-top: none !important;
+}
+
+.table {
+    border-top: 1px solid #737373;
+}
+.table-striped > tbody > tr > td:nth-child(6), .table-striped > tbody > tr> th:nth-child(6), .table th:nth-child(6)  {
+    border-right: 0;
+}
+
+.table>thead>tr>th {
+    position: relative;
+}
+.top-arrow{
+    width:4px;
+    height:4px;
+    border-top:  4px solid transparent;
+    border-right:  4px solid transparent;
+    border-left:  4px solid transparent;
+    border-bottom:  4px solid #D0DBDC;
+    position: absolute;
+    top: 7px;
+    right:5px;
+}
+.down-arrow{
+    width:4px;
+    height:4px;
+    border-top:  4px solid #D0DBDC;
+    border-right:  4px solid transparent;
+    border-left:  4px solid transparent;
+    border-bottom:  4px solid transparent;
+    position: absolute;
+    bottom: 7px;
+    right:5px;
+}
+.page-top-arrow{
+    width:4px;
+    height:4px;
+    border-top:  4px solid transparent;
+    border-right:  4px solid transparent;
+    border-left:  4px solid transparent;
+    border-bottom:  4px solid #333;
+    position: absolute;
+    top: -3px;
+    left:0px;
+}
+.page-down-arrow{
+    width:4px;
+    height:4px;
+    border-top:  4px solid #333;
+    border-right:  4px solid transparent;
+    border-left:  4px solid transparent;
+    border-bottom:  4px solid transparent;
+    position: absolute;
+    bottom: -5px;
+    left:0px;
+}
+
+.arrowContainer{
+    position: relative;
+    width:10px;
+    height:10px;
+    margin-left:-27px;
+}
