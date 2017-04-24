@@ -250,6 +250,14 @@ iframe{
 .table>thead>tr>th {
     position: relative;
 }
+
+.table-row-style{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .top-arrow{
     width:4px;
     height:4px;
