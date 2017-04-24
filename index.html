@@ -2,38 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!--<link rel="stylesheet" href="bootstrap.min.css">-->
-    <!--active color #02B281 -->
+    <title>FrontEndChallenge</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
-    <script src="ngclipboard.min.js"></script>
-
-    <link rel="stylesheet" href="style.css">
+    <script src="dependencies/ngclipboard.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <script src="app.js"></script>
-
 </head>
 <body ng-app="app" ng-controller="youtubeController">
 
-    <!-- START NAV-BAR -->
-    <nav class="navebar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#" >
-                    <img src="img/img.jpg">
-                </a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a>Front-End Developer Chanllenge</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- END NAV-BAR -->
+    <div ng-include src="'templates/navbar.html'"></div>
 
     <!-- START CONTAINER -->
     <div class="container-fluid">
@@ -47,7 +28,7 @@
                             <form class="navbar-form get-channel-style">
                                 <span>Channel Link</span>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="input-get-channel-style" placeholder="http://hello.com" size="28" ng-model="channelLink" ng-init="channelLink='https://www.youtube.com/channel/UC4cmBAit8i_NJZE8qK8sfpA' ;getYoutubeData();">
+                                    <input type="text" class="form-control" id="input-get-channel-style" ng-model="channelLink">
                                 </div>
                                 <button class="btn btn-success button-get-channel-style btn-color" type="submit" ng-click="getYoutubeData()">Submit</button>
                             </form>
@@ -70,9 +51,10 @@
                 <!-- END NAVBAR FORMS -->
 
                 <!-- START TABLE -->
+
+                <!-- START TABLE CONTENT -->
                 <div class="col-lg-12 table-container-style">
                     <h4>Videos items</h4>
-                    <!--<hr>-->
                     <div class="table-responsive">
                         <table class="table table-striped " id="table-style">
                             <thead>
@@ -113,6 +95,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- END TABLE CONTENT -->
 
                     <!-- Start PAGING footer -->
                     <div class="col-lg-12">
@@ -225,6 +208,5 @@
         </div>
     </div>
     <!-- END CONTAINER -->
-    <!--<script src="bootstrap.min.js"></script>-->
 </body>
 </html>

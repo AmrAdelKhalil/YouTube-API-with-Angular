@@ -15,6 +15,9 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
         completeURL: ''
     };
 
+
+
+
     $scope.selectVideo = function(videoId, mediumQuality, highQuality){
         $scope.selectedVideo.videoId = videoId;
         $scope.selectedVideo.mediumQuality = mediumQuality;
@@ -22,7 +25,6 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
         $scope.selectedVideo.completeURL = $sce.trustAsResourceUrl($scope.embeddedURL+
             ""+ $scope.selectedVideo.videoId
         )
-        // console.log(videoId+" "+mediumQuality+" "+highQuality);
     };
 
     $scope.filterChannelUrl = function () {
@@ -40,9 +42,8 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
     $scope.getYoutubeData = function(){
 
         $scope.channelId = $scope.filterChannelUrl($scope.channelLink);
-        // console.log($scope.channelId);
-        // console.log($scope.channelLink);
 
+        console.log($scope.channelLink+ " "+ $scope.channelId);
         $http.get('https://www.googleapis.com/youtube/v3/channels', {
             params: {
                 key: "AIzaSyAZNHm0VzKP-TiDQ9IeSSPvGoipZ2s5znQ",
@@ -58,8 +59,6 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
             $scope.youtubeSearchText = $scope.channelLink;
             $scope.youtubeUploads = data.items[0].contentDetails.relatedPlaylists.uploads;
             $scope.getAllVideos();
-            // console.log(data);
-            console.log($scope.youtubeUploads);
         }).error( function(e){
             console.log('something wrong');
         });
@@ -77,14 +76,12 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
             }
         }).success( function (data) {
             $scope.videos = data.items;
-            // console.log($scope.videos[0]);
             for(var i = 0 ; i < $scope.videos.length; i++){
                 $scope.getMoreDetails(i);
             }
             $scope.selectVideo($scope.videos[0].snippet.resourceId.videoId,
                 $scope.videos[0].snippet.thumbnails.medium.url,
                 $scope.videos[0].snippet.thumbnails.high.url);
-            // console.log($scope.videos);
         }).error( function(e){
             console.log('something wrong in getting videos');
         });
@@ -104,11 +101,6 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
             $scope.videos[index].likeCount = data.items[0].statistics.likeCount;
             $scope.videos[index].viewCount = data.items[0].statistics.viewCount;
             $scope.videos[index].duration = $scope.filterDuration(data.items[0].contentDetails.duration);
-
-            // console.log($scope.videos[1]);
-
-            // $scope.headForVideo = $scope.videos[0].snippet.resourceId.videoId;
-            // console.log($scope.headForVideo);
         }).error( function(e){
             console.log('something wrong in getting more details');
         });
@@ -155,7 +147,6 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
                 }
             }
             neededFormat = leadingZeros + neededFormat;
-            // console.log(neededFormat);
         }
         return neededFormat;
     };
@@ -168,6 +159,14 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
             console.log(data);
         });
     };
+
+
+    $scope.init = function () {
+        $scope.channelLink='https://www.youtube.com/channel/UC4cmBAit8i_NJZE8qK8sfpA';
+        $scope.getYoutubeData();
+    };
+
+    $scope.init();
 });
 
 //,snippet,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken
