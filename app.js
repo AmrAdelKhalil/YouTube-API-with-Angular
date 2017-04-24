@@ -3,7 +3,7 @@ var app = angular.module("app",[]);
 app.controller('youtubeController', function($scope,$http,$filter,$sce) {
     $scope.youtubeUploads;
     $scope.videos;
-    $scope.channelId;
+    $scope.channelId = "";
     $scope.headForVideo;
     $scope.nextPage = "";
     $scope.youtubeSearchText = "";

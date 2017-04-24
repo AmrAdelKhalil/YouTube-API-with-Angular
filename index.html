@@ -44,7 +44,7 @@
                             <form class="navbar-form get-channel-style">
                                 <span>Channel Link</span>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="input-get-channel-style" placeholder="http://hello.com" size="28" ng-model="channelLink">
+                                    <input type="text" class="form-control" id="input-get-channel-style" placeholder="http://hello.com" size="28" ng-model="channelLink" ng-init="channelLink='https://www.youtube.com/channel/UC4cmBAit8i_NJZE8qK8sfpA' ;getYoutubeData();">
                                 </div>
                                 <button class="btn btn-success button-get-channel-style btn-color" type="submit" ng-click="getYoutubeData()">Submit</button>
                             </form>
