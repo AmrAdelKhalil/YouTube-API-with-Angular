@@ -13,7 +13,7 @@ angular.module("app").service('Params', function () {
     this.getVideosParams = function (youTubeUploads) {
         return {
             key: "AIzaSyAZNHm0VzKP-TiDQ9IeSSPvGoipZ2s5znQ",
-            maxResults: '2',
+            maxResults: '12',
             // pageToken: $scope.nextPage ? $scope.nextPage : '',
             part: 'snippet',
             fields: 'items/snippet/publishedAt,items/snippet/title,items/snippet/description,items/snippet/thumbnails/medium,items/snippet/thumbnails/high,items/snippet/resourceId/videoId',

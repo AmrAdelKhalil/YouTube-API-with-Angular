@@ -78,12 +78,10 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
     };
 
     $scope.init = function () {
-        $scope.channel.channelLink='https://www.youtube.com/channel/UC4cmBAit8i_NJZE8qK8sfpA';
+        $scope.channel.channelLink='https://www.youtube.com/channel/UCQ5kHOKpF3-1_UCKaqXARRg';
         $scope.getYoutubeChannelData();
     };
 
     $scope.init();
 });
 
-//,snippet,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken
-// AIzaSyB6gTh61IDp9osagdfV4AwXBo91vPAMF2c
