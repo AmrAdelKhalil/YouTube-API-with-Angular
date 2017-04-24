@@ -161,10 +161,13 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
     };
 
     $scope.download = function (url) {
-        $http.get(url, {
+        $http.post("https://i.ytimg.com/vi/TfKrNGv5Ajw/mqdefault.jpg",{
+            AccessControlAllowOrigin: '*',
             key: "AIzaSyAZNHm0VzKP-TiDQ9IeSSPvGoipZ2s5znQ"
+        }).success( function (data) {
+            console.log(data);
         });
-    }
+    };
 });
 
 //,snippet,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken
