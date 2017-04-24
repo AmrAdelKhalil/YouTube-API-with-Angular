@@ -1,13 +1,29 @@
-var app = angular.module("app",[]);
+var app = angular.module("app",['ngclipboard']);
 
 app.controller('youtubeController', function($scope,$http,$filter,$sce) {
     $scope.youtubeUploads;
     $scope.videos;
     $scope.channelId = "";
-    $scope.headForVideo;
+    $scope.embeddedURL = "https://www.youtube.com/embed/";
     $scope.nextPage = "";
     $scope.youtubeSearchText = "";
     $scope.channelLink="";
+    $scope.selectedVideo = {
+        videoId: '',
+        mediumQuality: '',
+        highQuality: '',
+        completeURL: ''
+    };
+
+    $scope.selectVideo = function(videoId, mediumQuality, highQuality){
+        $scope.selectedVideo.videoId = videoId;
+        $scope.selectedVideo.mediumQuality = mediumQuality;
+        $scope.selectedVideo.highQuality = highQuality;
+        $scope.selectedVideo.completeURL = $sce.trustAsResourceUrl($scope.embeddedURL+
+            ""+ $scope.selectedVideo.videoId
+        )
+        // console.log(videoId+" "+mediumQuality+" "+highQuality);
+    };
 
     $scope.filterChannelUrl = function () {
         var channelId = "", slashCounter = 0;
@@ -53,7 +69,7 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
         $http.get('https://www.googleapis.com/youtube/v3/playlistItems', {
             params: {
                 key: "AIzaSyAZNHm0VzKP-TiDQ9IeSSPvGoipZ2s5znQ",
-                maxResults: '10',
+                maxResults: '2',
                 pageToken: $scope.nextPage ? $scope.nextPage : '',
                 part: 'snippet',
                 fields: 'items/snippet/publishedAt,items/snippet/title,items/snippet/description,items/snippet/thumbnails/medium,items/snippet/thumbnails/high,items/snippet/resourceId/videoId',
@@ -65,6 +81,9 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
             for(var i = 0 ; i < $scope.videos.length; i++){
                 $scope.getMoreDetails(i);
             }
+            $scope.selectVideo($scope.videos[0].snippet.resourceId.videoId,
+                $scope.videos[0].snippet.thumbnails.medium.url,
+                $scope.videos[0].snippet.thumbnails.high.url);
             // console.log($scope.videos);
         }).error( function(e){
             console.log('something wrong in getting videos');
@@ -86,9 +105,8 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
             $scope.videos[index].viewCount = data.items[0].statistics.viewCount;
             $scope.videos[index].duration = $scope.filterDuration(data.items[0].contentDetails.duration);
 
-            // $scope.headForVideo = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"
-            //     + $scope.videos[0].snippet.resourceId.videoId
-            // )
+            // console.log($scope.videos[1]);
+
             // $scope.headForVideo = $scope.videos[0].snippet.resourceId.videoId;
             // console.log($scope.headForVideo);
         }).error( function(e){
@@ -141,6 +159,12 @@ app.controller('youtubeController', function($scope,$http,$filter,$sce) {
         }
         return neededFormat;
     };
+
+    $scope.download = function (url) {
+        $http.get(url, {
+            key: "AIzaSyAZNHm0VzKP-TiDQ9IeSSPvGoipZ2s5znQ"
+        });
+    }
 });
 
 //,snippet,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken
