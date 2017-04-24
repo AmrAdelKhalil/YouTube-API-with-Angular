@@ -19,7 +19,7 @@ h4{
     width:100px;height:40px;
 }
 
-.container-fluid .navbar-nav li a{
+.container-fluid .navbar-nav li a, .container-fluid .navbar-nav li a:hover{
     color: #D0DBDC;
 }
 
@@ -81,6 +81,20 @@ h4{
 .btn-color{
     background-color:#02B281;
     border-color:#02B281;
+    border:0;
+}
+
+.btn-color:hover{
+    background-color:#02B281;
+    border-color:#02B281;
+    border: 0;
+}
+
+.btn-color:focus{
+    background-color:#02B281;
+    border-color:#02B281;
+    border: 0;
+    outline: 0;
 }
 
 .table-container-style{
