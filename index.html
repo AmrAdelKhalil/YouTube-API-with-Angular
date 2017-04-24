@@ -11,6 +11,11 @@
     <script src="dependencies/ngclipboard.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="app.js"></script>
+    <script src="services/extractingDataService.js"></script>
+    <script src="controllers/youtubeController.js"></script>
+    <script src="services/filterServices.js"></script>
+    <script src="services/paramsServices.js"></script>
+    <script src="services/ConstantsServices.js"></script>
 </head>
 <body ng-app="app" ng-controller="youtubeController">
 
@@ -28,9 +33,9 @@
                             <form class="navbar-form get-channel-style">
                                 <span>Channel Link</span>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="input-get-channel-style" ng-model="channelLink">
+                                    <input type="text" class="form-control" id="input-get-channel-style" ng-model="channel.channelLink">
                                 </div>
-                                <button class="btn btn-success button-get-channel-style btn-color" type="submit" ng-click="getYoutubeData()">Submit</button>
+                                <button class="btn btn-success button-get-channel-style btn-color" type="submit" ng-click="getYoutubeChannelData()">Submit</button>
                             </form>
                             <!-- END GET CHANNEL DATA -->
                         </li>
