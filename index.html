@@ -88,8 +88,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="video in videos" id="{{video.snippet.resourceId.videoId == selectedVideo.videoId?'selectedRow':''}}" ng-click="selectVideo(video.snippet.resourceId.videoId,video.snippet.thumbnails.medium.url,
-                                                     video.snippet.thumbnails.high.url)">
+                                <tr ng-repeat="video in videos"
+                                    id="{{video.snippet.resourceId.videoId == selectedVideo.videoId?'selectedRow':''}}"                                       ng-click="selectVideo(video.snippet.resourceId.videoId, video.snippet.thumbnails.medium.url, video.snippet.thumbnails.high.url)">
                                     <td class="table-row-style">{{ video.snippet.title }}</td>
                                     <td class="table-row-style">{{ video.snippet.publishedAt | date:'yyyy-MM-dd'}}</td>
                                     <td class="table-row-style">{{ video.duration }}</td>

@@ -1,6 +1,5 @@
 angular.module("app").controller('youtubeController', function($scope,$http,$sce, Filter,Params,Constants) {
 
-
     $scope.channel = {
         youtubeUploads: '',
         channelId: '',
@@ -32,15 +31,12 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
         $http.get(Constants.getChannelURL(), {
             params: Params.getChannelParams($scope.channel.channelId)
         }).success( function (data) {
-            if (data.items.length === 0) {
-                $scope.channel.youtubeUploads = 'No results were found!';
-            }else{
+            if (data.items.length != 0) {
                 $scope.channel.youtubeUploads = data.items[0].contentDetails.relatedPlaylists.uploads;
                 $scope.getAllVideos();
             }
-
         }).error( function(e){
-            console.log('something wrong');
+            console.log('Channel data provided is not correct');
         });
     };
 
@@ -56,7 +52,7 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
                 $scope.videos[0].snippet.thumbnails.medium.url,
                 $scope.videos[0].snippet.thumbnails.high.url);
         }).error( function(e){
-            console.log('something wrong in getting videos');
+            console.log('Video data provided is not correct');
         });
     };
 
@@ -68,7 +64,7 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
             $scope.videos[index].viewCount = data.items[0].statistics.viewCount;
             $scope.videos[index].duration = Filter.filterDuration(data.items[0].contentDetails.duration);
         }).error( function(e){
-            console.log('something wrong in getting more details');
+            console.log('Video data provided is not correct');
         });
     };
 
@@ -80,7 +76,6 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
             console.log(data);
         });
     };
-
 
     $scope.init = function () {
         $scope.channel.channelLink='https://www.youtube.com/channel/UC4cmBAit8i_NJZE8qK8sfpA';

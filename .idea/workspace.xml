@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7591edeb-871b-4f75-a985-762a9d23d38c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/youtubeController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/ConstantsServices.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/extractingDataService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/filterServices.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/paramsServices.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/youtubeController.js" afterPath="$PROJECT_DIR$/controllers/youtubeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="35" column="123" lean-forward="false" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="123" />
+              <caret line="91" column="214" lean-forward="false" selection-start-line="91" selection-start-column="214" selection-end-line="91" selection-end-column="214" />
               <folding />
             </state>
           </provider>
@@ -47,8 +41,8 @@
       <file leaf-file-name="youtubeController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/youtubeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="50" column="36" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+            <state relative-caret-position="2064">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,8 +129,8 @@
       <find>getYoutubeData</find>
       <find>youtubeUploads</find>
       <find>channelId</find>
-      <find>channelLink</find>
       <find>videos</find>
+      <find>channelLink</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,8 +147,8 @@
         <option value="$PROJECT_DIR$/services/paramsServices.js" />
         <option value="$PROJECT_DIR$/services/filterServices.js" />
         <option value="$PROJECT_DIR$/services/ConstantsServices.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/controllers/youtubeController.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -377,12 +371,12 @@
       <workItem from="1492977758069" duration="84000" />
       <workItem from="1492977857377" duration="20000" />
       <workItem from="1492995786592" duration="7771000" />
-      <workItem from="1493032437678" duration="23675000" />
+      <workItem from="1493032437678" duration="24254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80460000" />
+    <option name="totallyTimeSpent" value="81039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -637,14 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="123" lean-forward="false" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/extractingDataService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -653,10 +639,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="91" column="214" lean-forward="false" selection-start-line="91" selection-start-column="214" selection-end-line="91" selection-end-column="214" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/youtubeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="50" column="36" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+        <state relative-caret-position="2064">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
