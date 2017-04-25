@@ -248,6 +248,12 @@ iframe{
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
     background-color: #0C2C2B;
 }
+
+.table-striped tbody tr:hover td, .table-striped tbody tr:hover th {
+    background-color: #02B281;
+    cursor: pointer;
+}
+
 .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
     border-bottom-width: 0px;
 }

@@ -13,7 +13,7 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
     };
     $scope.videos;
     $scope.nextPage = "";
-
+    $scope.numberOfVideos;
 
     $scope.selectVideo = function(videoId, mediumQuality, highQuality){
         $scope.selectedVideo.videoId = videoId;

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7591edeb-871b-4f75-a985-762a9d23d38c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/services/extractingDataService.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/youtubeController.js" afterPath="$PROJECT_DIR$/controllers/youtubeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/paramsServices.js" afterPath="$PROJECT_DIR$/services/paramsServices.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
-              <caret line="198" column="157" lean-forward="false" selection-start-line="198" selection-start-column="149" selection-end-line="198" selection-end-column="157" />
+              <caret line="111" column="108" lean-forward="false" selection-start-line="111" selection-start-column="108" selection-end-line="111" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -35,8 +33,8 @@
       <file leaf-file-name="youtubeController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/youtubeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="80" column="92" lean-forward="false" selection-start-line="80" selection-start-column="92" selection-end-line="80" selection-end-column="92" />
+            <state relative-caret-position="248">
+              <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -57,12 +55,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="21" />
-              <folding />
+              <folding>
+                <marker date="1493073850971" expanded="true" signature="55:499" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paramsServices.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="paramsServices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/paramsServices.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -85,8 +85,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="147" column="32" lean-forward="false" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="32" />
+            <state relative-caret-position="351">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,10 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>span</find>
-      <find>start navbar</find>
-      <find>video-details-items-style</find>
-      <find>.header-video-details-style</find>
       <find>start video</find>
       <find>header-item-video-details-style</find>
       <find>frame-item-video-details-style</find>
@@ -121,7 +117,6 @@
       <find>input-get-channel-style</find>
       <find>init</find>
       <find>input-search-channel-style</find>
-      <find>next-button-margin-paging-style</find>
       <find>filter</find>
       <find>filterChannelUrl</find>
       <find>checkDataLength</find>
@@ -133,7 +128,12 @@
       <find>youtubeUploads</find>
       <find>channelId</find>
       <find>channelLink</find>
+      <find>next-button-margin-paging-style</find>
+      <find>table-row-style</find>
+      <find>table-row-hover-style</find>
       <find>download</find>
+      <find>.table-container-style</find>
+      <find>input-paging-style</find>
       <find>videos</find>
     </findStrings>
   </component>
@@ -150,10 +150,11 @@
         <option value="$PROJECT_DIR$/services/extractingData.js" />
         <option value="$PROJECT_DIR$/services/filterServices.js" />
         <option value="$PROJECT_DIR$/services/ConstantsServices.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/controllers/youtubeController.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/services/paramsServices.js" />
+        <option value="$PROJECT_DIR$/controllers/youtubeController.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -432,16 +433,15 @@
       <workItem from="1492977758069" duration="84000" />
       <workItem from="1492977857377" duration="20000" />
       <workItem from="1492995786592" duration="7771000" />
-      <workItem from="1493032437678" duration="26711000" />
+      <workItem from="1493032437678" duration="28809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83496000" />
+    <option name="totallyTimeSpent" value="85594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19323143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -449,7 +449,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -647,14 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="147" column="32" lean-forward="false" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/filterServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -684,22 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="198" column="157" lean-forward="false" selection-start-line="198" selection-start-column="149" selection-end-line="198" selection-end-column="157" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/youtubeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="80" column="92" lean-forward="false" selection-start-line="80" selection-start-column="92" selection-end-line="80" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -712,6 +688,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <marker date="1493073850971" expanded="true" signature="55:499" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -720,6 +706,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/youtubeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="111" column="108" lean-forward="false" selection-start-line="111" selection-start-column="108" selection-end-line="111" selection-end-column="108" />
           <folding />
         </state>
       </provider>

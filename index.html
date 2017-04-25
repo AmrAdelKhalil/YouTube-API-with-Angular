@@ -87,7 +87,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="video in videos"
+                                <tr class="table-row-hover-style" ng-repeat="video in videos"
                                     id="{{video.snippet.resourceId.videoId == selectedVideo.videoId?'selectedRow':''}}"                                       ng-click="selectVideo(video.snippet.resourceId.videoId, video.snippet.thumbnails.medium.url, video.snippet.thumbnails.high.url)">
                                     <td class="table-row-style">{{ video.snippet.title }}</td>
                                     <td class="table-row-style">{{ video.snippet.publishedAt | date:'yyyy-MM-dd'}}</td>
@@ -109,7 +109,7 @@
                                 <ul class="list-inline">
                                     <li>Page: 1 Show</li>
                                     <li>
-                                        <input type="text" class="input-paging-style" value="50" size="4" disabled>
+                                        <input type="text" class="input-paging-style" value="{{videos.length}}" size="4" disabled>
                                     </li>
                                     <li id="arrow-input-paging-style" >
                                         <div class="arrowContainer">
