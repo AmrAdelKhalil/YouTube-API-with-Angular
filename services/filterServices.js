@@ -1,3 +1,6 @@
+/*
+    This Service is responsible for doing filtering tasks.
+ */
 angular.module("app").service('Filter', function () {
 
     this.filterChannelUrl = function (url) {

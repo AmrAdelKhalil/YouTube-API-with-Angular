@@ -11,9 +11,14 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
         highQuality: '',
         completeURL: ''
     };
+    $scope.tokens = {
+        nextPage: '',
+        prevPage: '',
+        currentPage: ''
+    };
     $scope.videos;
-    $scope.nextPage = "";
     $scope.numberOfVideos;
+    $scope.pageNumber;
 
     $scope.selectVideo = function(videoId, mediumQuality, highQuality){
         $scope.selectedVideo.videoId = videoId;
@@ -24,7 +29,12 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
         )
     };
 
-    $scope.getYoutubeChannelData = function(){
+    $scope.getYoutubeChannelData = function(newChannel){
+
+        if(newChannel == true){
+            $scope.tokens.currentPage = '';
+            $scope.pageNumber = 1;
+        }
 
         $scope.channel.channelId = Filter.filterChannelUrl($scope.channel.channelLink);
 
@@ -42,9 +52,13 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
 
     $scope.getAllVideos = function () {
         $http.get(Constants.getPlayListItemsURL(), {
-            params: Params.getVideosParams($scope.channel.youtubeUploads)
+            params: Params.getVideosParams($scope.channel.youtubeUploads, $scope.tokens.currentPage)
         }).success( function (data) {
             $scope.videos = data.items;
+            $scope.tokens.nextPage = (data.nextPageToken)?data.nextPageToken:'';
+            $scope.tokens.prevPage = (data.prevPageToken)?data.prevPageToken:'';
+            $scope.numberOfVideos = $scope.videos.length;
+
             for(var i = 0 ; i < $scope.videos.length; i++){
                 $scope.getMoreDetails(i);
             }
@@ -77,8 +91,25 @@ angular.module("app").controller('youtubeController', function($scope,$http,$sce
         });
     };
 
+    $scope.nextPage = function () {
+        if($scope.tokens.nextPage != ''){
+            $scope.tokens.currentPage = $scope.tokens.nextPage;
+            $scope.pageNumber++;
+            $scope.getYoutubeChannelData(false);
+        }
+    };
+
+    $scope.prevPage = function () {
+        if($scope.tokens.prevPage != ''){
+            $scope.tokens.currentPage = $scope.tokens.prevPage;
+            $scope.pageNumber--;
+            $scope.getYoutubeChannelData(false);
+        }
+    }
+
     $scope.init = function () {
         $scope.channel.channelLink='https://www.youtube.com/channel/UCQ5kHOKpF3-1_UCKaqXARRg';
+        $scope.pageNumber = 1;
         $scope.getYoutubeChannelData();
     };
 

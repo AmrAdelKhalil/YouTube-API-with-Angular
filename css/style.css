@@ -155,6 +155,15 @@ h4{
     background-color: transparent;
     padding:2px 8px 6px 8px;
     color:#D0DBDC;
+    outline: 0;
+}
+
+.btn-default.disabled:focus, .btn-default.disabled:hover{
+    outline: 0;
+}
+
+.btn-default:focus{
+    outline: 0;
 }
 
 .video-details-style{

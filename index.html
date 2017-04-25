@@ -34,7 +34,7 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="input-get-channel-style" ng-model="channel.channelLink">
                                 </div>
-                                <button class="btn btn-success button-get-channel-style btn-color" type="submit" ng-click="getYoutubeChannelData()">Submit</button>
+                                <button class="btn btn-success button-get-channel-style btn-color" type="submit" ng-click="getYoutubeChannelData(true)">Submit</button>
                             </form>
                             <!-- END GET CHANNEL DATA -->
                         </li>
@@ -107,9 +107,9 @@
                             <!-- START PAGING COUNTER -->
                             <div class="col-lg-6">
                                 <ul class="list-inline">
-                                    <li>Page: 1 Show</li>
+                                    <li>Page: {{pageNumber}} Show</li>
                                     <li>
-                                        <input type="text" class="input-paging-style" value="{{videos.length}}" size="4" disabled>
+                                        <input type="text" class="input-paging-style" ng-model="numberOfVideos" size="4" disabled>
                                     </li>
                                     <li id="arrow-input-paging-style" >
                                         <div class="arrowContainer">
@@ -128,12 +128,12 @@
                             <div class="col-lg-6">
                                 <ul class="list-inline">
                                     <li class="pull-right">
-                                        <button class="btn btn-default next-prev-paging-style" type="submit">
+                                        <button class="btn btn-default next-prev-paging-style" type="submit" ng-click="nextPage()" ng-class="{disabled: tokens.nextPage==''}">
                                             ❯
                                         </button>
                                     </li>
                                     <li class="pull-right">
-                                        <button class="btn btn-default next-prev-paging-style next-button-margin-paging-style" type="submit">
+                                        <button class="btn btn-default next-prev-paging-style next-button-margin-paging-style" type="submit" ng-click="prevPage()" ng-class="{disabled: tokens.prevPage==''}">
                                             ❮
                                         </button>
                                     </li>
@@ -172,7 +172,7 @@
                             <ul class="list-group option-container-video-details-style">
 
                                 <!-- START MEDIUM QUALITY FORM -->
-                                <li class="list-group-item input-quality-video-details-style" style="">
+                                <li class="list-group-item input-quality-video-details-style">
                                     <form>
                                         <div class="form-group" >
                                             <label >Medium Quality thumbnail</label>

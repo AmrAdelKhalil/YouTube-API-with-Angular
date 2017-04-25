@@ -73,7 +73,7 @@ Tasks
 
     2- Bouns:
         2.1- Add a text box on the top, to set the channel identifier and reload the table, status: done
-        2.2- Implement paging in the videos table, status: not done
+        2.2- Implement paging in the videos table, status: done
 
 -------------------------------------------
 
